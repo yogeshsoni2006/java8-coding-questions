@@ -28,5 +28,9 @@ public class Test {
         Set<Integer> notDuplicates = al.stream().filter(x->!dupNumbers.add(x)).collect(Collectors.toSet());
         System.out.printf("notDuplicates=>"+notDuplicates);
         System.out.println("dupNumbers=>"+dupNumbers);
+
+        List<String> names = Arrays.asList("rohit", "urmila", "rohit", "urmila", "ram", "sham", "sita", "gita");
+        Map<String, Long> frequencyWords = names.stream().collect(groupingBy(Function.identity(), counting()));
+        System.out.println(frequencyWords);
     }
 }
