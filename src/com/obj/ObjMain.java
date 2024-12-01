@@ -22,7 +22,11 @@ public class ObjMain {
         Employee highestPaid = employees.stream()
                 .max(Comparator.comparingDouble(Employee::getSalary))
                 .orElse(null);
-        System.out.println(highestPaid);
+        //System.out.println(highestPaid);
+        Employee highestPaid1 = employees.stream()
+                .max(Comparator.comparing(Employee::getSalary))
+                .orElse(null);
+        System.out.println(highestPaid1);
 
         //Sort Employee by name
         System.out.println("\nSort Employees by name:");
