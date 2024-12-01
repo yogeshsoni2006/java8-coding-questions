@@ -28,6 +28,5 @@ public class Test {
         Set<Integer> notDuplicates = al.stream().filter(x->!dupNumbers.add(x)).collect(Collectors.toSet());
         System.out.printf("notDuplicates=>"+notDuplicates);
         System.out.println("dupNumbers=>"+dupNumbers);
-        //Set<Integer> s = oneToTen.stream().filter(x->oneToTen.add())
     }
 }
