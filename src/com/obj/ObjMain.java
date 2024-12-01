@@ -26,7 +26,8 @@ public class ObjMain {
 
         //Sort Employee by name
         System.out.println("\nSort Employees by name:");
-        employees.sort((Employee e1, Employee e2) -> e1.getName().compareTo(e2.getName()));
+        //employees.sort((Employee e1, Employee e2) -> e1.getName().compareTo(e2.getName()));
+        employees.sort(Comparator.comparing(Employee::getName));
         employees.forEach(System.out::println);
 
         System.out.println("\nSort Employees by Salary:");
