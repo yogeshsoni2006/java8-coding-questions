@@ -23,5 +23,11 @@ public class Test {
         String name = "yogesh yog";
         Map<String, Long> al1 = Arrays.stream(name.split("")).collect(groupingBy(Function.identity(), counting()));
         System.out.println(al1);
+
+        Set<Integer> dupNumbers = new HashSet<>();
+        Set<Integer> notDuplicates = al.stream().filter(x->!dupNumbers.add(x)).collect(Collectors.toSet());
+        System.out.printf("notDuplicates=>"+notDuplicates);
+        System.out.println("dupNumbers=>"+dupNumbers);
+        //Set<Integer> s = oneToTen.stream().filter(x->oneToTen.add())
     }
 }
